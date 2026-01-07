@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build: NICEMCU",
+            "type": "shell",
+            "command": "arduino-cli compile --fqbn realtek:AmebaD:Ai-Thinker_BW16 --library libraries/RTL8720_Common --library libraries/RTL8720_Led --library libraries/RTL8720_Wireless --build-property \"build.extra_flags=-mthumb -DCORE_RTL8720DN -DBOARD_AITHINKER_BW16 -DBOARD_NICEMCU\" ${fileDirname}",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "NICEMCU_8720_v1 için derleme (15 GPIO, 3 ADC, HS_I2C)"
+        },
+        {
+            "label": "Build: BW16-Kit",
+            "type": "shell",
+            "command": "arduino-cli compile --fqbn realtek:AmebaD:Ai-Thinker_BW16 --library libraries/RTL8720_Common --library libraries/RTL8720_Led --library libraries/RTL8720_Wireless --build-property \"build.extra_flags=-mthumb -DCORE_RTL8720DN -DBOARD_AITHINKER_BW16 -DBOARD_BW16KIT\" ${fileDirname}",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "BW16-Kit v1.2 için derleme (13 GPIO, 1 ADC)"
+        },
+        {
+            "label": "Build: Default (NICEMCU)",
+            "type": "shell",
+            "command": "arduino-cli compile --fqbn realtek:AmebaD:Ai-Thinker_BW16 --library libraries/RTL8720_Common --library libraries/RTL8720_Led --library libraries/RTL8720_Wireless ${fileDirname}",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Board flag olmadan derleme (SDK defaults + warning)"
+        },
+        {
+            "label": "Upload",
+            "type": "shell",
+            "command": "arduino-cli upload -p ${MY_PORT} --fqbn realtek:AmebaD:Ai-Thinker_BW16 ${fileDirname}",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "detail": "Karta yükle"
+        },
+        {
+            "label": "Monitor: Serial (115200)",
+            "type": "shell",
+            "command": "arduino-cli monitor -p ${MY_PORT} -c baudrate=115200",
+            "group": "test",
+            "detail": "Serial monitor (LOG_UART)"
+        },
+        {
+            "label": "Monitor: Serial (9600)",
+            "type": "shell",
+            "command": "arduino-cli monitor -p ${MY_PORT} -c baudrate=9600",
+            "group": "test",
+            "detail": "Serial monitor (LP_UART default baud)"
+        }
+    ]
+}

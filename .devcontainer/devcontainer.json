@@ -1,0 +1,39 @@
+{
+	"name": "Arduino dev",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".",
+		"args": {
+			"USER_NAME": "vscode",
+			"VARIANT": "debian-11",
+			"ARDUINO_CLI_VERSION": "1.4.0",
+            "DIALOUT_GID": "20"
+		 }
+	},
+
+    "containerEnv": {
+        "MY_PORT": "/dev/ttyUSB0",
+        "MY_FQBN": "realtek:AmebaD:Ai-Thinker_BW16"
+    },
+
+	"settings": { 
+		"arduino.logLevel": "verbose"
+	},
+
+	"extensions": [
+		"Anthropic.claude-code"
+	],
+
+	"mounts": [
+		"source=/dev,target=/dev,type=bind"
+	],
+	
+	"runArgs": [
+		"--privileged",
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
+
+	"remoteUser": "vscode"
+}

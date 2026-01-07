@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "AmebaD_BW16",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/libraries/RTL8720_Common/src",
+                "${workspaceFolder}/libraries/RTL8720_Led/src",
+                "${workspaceFolder}/libraries/RTL8720_Wireless/src",
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/cores/ambd",
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/cores/ambd/avr",
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/variants/rtl8720dn_bw16",
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/system/project/realtek_amebaD_va0_example/inc/inc_hp",
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/system/component/**",
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/libraries/**"
+            ],
+            "forcedInclude": [
+                "/home/vscode/.arduino15/packages/realtek/hardware/AmebaD/3.1.9/cores/ambd/Arduino.h"
+            ],
+            "defines": [
+                "BOARD_RTL8721D",
+                "BOARD_AITHINKER_BW16",
+                "BOARD_NICEMCU",
+                "CORE_RTL8720DN",
+                "ARDUINO=10819",
+                "ARDUINO_AMEBA",
+                "__arm__",
+                "F_CPU=200000000L"
+            ],
+            "compilerPath": "/home/vscode/.arduino15/packages/realtek/tools/ameba_d_asdk_toolchain/1.0.1/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        }
+    ],
+    "version": 4
+}
