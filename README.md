@@ -12,10 +12,10 @@ RTL8720DN/BW16 Arduino development starter kit with VSCode DevContainer - ready 
 
 ## Supported Boards
 
-| Board | Chip | WiFi | BLE | GPIO |
-|-------|------|------|-----|------|
-| BW16-Kit v1.2 | RTL8720DN | 2.4/5GHz | 5.0 | 13 pins |
-| NiceMCU 8720 v1 | RTL8720DN | 2.4/5GHz | 5.0 | 10 pins |
+| Board | Chip | WiFi | BLE | GPIO | ADC |
+|-------|------|------|-----|------|-----|
+| NiceMCU 8720 v1 | RTL8720DN | 2.4/5GHz | 5.0 | 15 pins | 3 ch |
+| BW16-Kit v1.2 | RTL8720DN | 2.4/5GHz | 5.0 | 13 pins | 1 ch |
 
 ## Quick Start
 
