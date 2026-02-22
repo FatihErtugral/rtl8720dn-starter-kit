@@ -1,0 +1,7 @@
+# Her yerde LF kullan
+* text=auto eol=lf
+
+# Binary dosyalara dokunma
+*.png binary
+*.jpg binary
+*.bin binary
